@@ -1,0 +1,42 @@
+@use 'src/styles' as *;
+
+:host {
+  .header-toolbar {
+    background: $white;
+    border-bottom: 1px solid $gray-100;
+    height: $header-height;
+    display: flex;
+    justify-content: space-between;
+    padding: 0 1rem;
+    width: 100%;
+    margin-right: auto;
+    margin-left: auto;
+    align-items: center;
+  }
+  
+  .right {
+    @extend %flex-center;
+    gap: 0.5rem;
+    margin-right: 40px;
+
+  }
+
+  .logo-circle {
+    @extend %flex-center;
+    width: 32px;
+    height: 32px;
+    background: $primary-500;
+    color: $white;
+    border-radius: 50%;
+    font-size: 12px;
+    font-weight: bold;;
+  }
+
+  .logo-label {
+    font: 600 16px/1.2 inherit; 
+  }
+
+  .menu-button {
+    @extend %icon-btn;
+  }
+}

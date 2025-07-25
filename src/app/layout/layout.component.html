@@ -1,0 +1,11 @@
+<!-- header component -->
+<app-header (toggleSidenav)="sidepanel.toggle()"></app-header>
+<!-- Drawer component -->
+<div class="body">
+    <app-sidepanel #sidepanel></app-sidepanel>
+    <div class="main">
+        <div class="content">
+            <router-outlet></router-outlet>
+        </div>
+    </div>
+</div>

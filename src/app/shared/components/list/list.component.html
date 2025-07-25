@@ -1,0 +1,13 @@
+<ul
+  class="options"
+  role="listbox"
+> 
+  <li
+    *ngFor="let option of options; let i = index"
+    role="option"
+    [class.active]="i === activeIndex"
+    (mousedown)="onSelect(option)"
+  >
+    {{ option }}
+  </li>
+</ul>

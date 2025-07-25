@@ -1,0 +1,24 @@
+@use 'src/styles' as *;
+
+:host {
+  display: block;
+  .search-form {
+    max-width: 500px;
+    width: 100%;
+  }
+  
+  .search-label {
+    font: 600 1.5rem/1.3 inherit; 
+    color: $gray-900; 
+  }
+  .helper {
+    font-size: 0.875rem; 
+    color: $gray-600; 
+    margin: 0.5rem 0 1rem; 
+  }
+  
+  .autocomplete-wrapper {
+    position: relative;
+    width: 100%;
+  }
+}

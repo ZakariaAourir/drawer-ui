@@ -1,0 +1,5 @@
+#!/usr/bin/env sh
+. "$(dirname -- "$0")/_/husky.sh"
+# This script runs before a commit is made.
+# npm run lint
+# npm run format

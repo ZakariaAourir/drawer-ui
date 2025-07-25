@@ -1,0 +1,11 @@
+<input
+  class="input"
+  type="text"
+  [formControl]="control"
+  [placeholder]="placeholder"
+  autocomplete="off"
+  aria-autocomplete="list"
+  (focus)="focus.emit()"
+  (input)="input.emit()"
+  (keydown)="keydown.emit($event)"
+/>

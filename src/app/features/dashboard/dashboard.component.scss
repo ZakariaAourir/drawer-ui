@@ -1,0 +1,19 @@
+@use 'src/styles' as *;
+
+:host {
+  .container-button {
+    @extend %flex-center; 
+    flex-direction: column;
+  } 
+  h1 {
+    font-weight: bold;
+    margin: 0;
+    margin-bottom: 0.5rem;
+  } 
+  p {
+    font-size: 1rem;
+    color: $gray-600;
+    margin-bottom: 1rem;
+  }
+}
+  

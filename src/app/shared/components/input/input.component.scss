@@ -1,0 +1,23 @@
+@use 'src/styles' as *;
+
+:host {
+  .input {
+    width: 100%;
+    box-sizing: border-box;
+    padding: 0.7rem 0.75rem;
+    font-size: 1rem;
+    border: 1px solid $gray-300;
+    border-radius: 4px;
+    transition: border-color $fast;
+
+  }
+
+  &::placeholder { 
+    color: $gray-500; 
+  }
+  
+  &:focus {
+    border-color: $primary-600; 
+    outline: none;
+  }
+}

@@ -1,0 +1,21 @@
+<form class="search-form" (submit)="preventSubmit($event)">
+  <label class="search-label">Search OneShop</label>
+  <p class="helper">Find tools, features, documentation, or get help</p>
+  <div class="autocomplete-wrapper">
+    <app-input
+      [control]="myControl"
+      placeholder="Pick one"
+      (input)="open()"
+      (keydown)="handleKey($event)"
+    ></app-input>
+
+    <ng-container *ngIf="filteredOptions | async as options">
+      <app-list
+        *ngIf="isOpen && options.length"
+        [options]="options"
+        [activeIndex]="activeIndex"
+        (select)="select($event)"
+      ></app-list>
+    </ng-container>
+  </div>
+</form>

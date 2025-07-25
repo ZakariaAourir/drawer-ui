@@ -1,0 +1,51 @@
+/* ----- COLOUR PALETTE --------------------------------------------------- */
+$white:          #ffffff;
+
+$gray-50:        #f3f4f6;
+$gray-100:       #e5e7eb;
+$gray-300:       #cccccc;
+$gray-500:       #818181;
+$gray-600:       #666666;
+$gray-700:       #4b5563;
+$gray-900:       #333333;
+
+$primary-500:    #8b5cf6;   // normal purple
+$primary-600:    #895bf5;   // focused purple
+
+/* ----- SIZES ------------------------------------------------------------ */
+$header-height: 64px;
+$drawer-width: 400px;
+$page-max-width: 1040px;
+
+/* ----- TRANSITIONS / EASING -------------------------------------------- */
+$fast: 150ms cubic-bezier(0.4, 0, 0.2, 1);
+$medium: 260ms ease;
+
+/* ----- GENERIC UTILITIES (placeholder selectors) ----------------------- */
+/*  Use “@extend %flex-center;”  to centre any flex item horizontally+vert. */
+%flex-center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/*  Re‑usable icon button (menu / close) */
+%icon-btn {
+  @extend %flex-center;
+  width: 2.5rem;
+  height: 2.5rem;
+  border-radius: 5px;
+  border: none;
+  background: none;
+  cursor: pointer;
+  font: 500 0.875rem/1.25rem inherit;
+  transition: background-color $fast;
+
+  &:hover  { background: $gray-50; }
+  &:focus  { outline: none; box-shadow: 0 0 0 3px rgba($primary-500, .5); }
+
+  .material-icons { color: $gray-700; font-size: 24px; line-height: 1; }
+}
+
+/* Utility class (not placeholder) – use directly in templates if you like */
+.flex-center { @extend %flex-center; }
